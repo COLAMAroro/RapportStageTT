@@ -1,0 +1,134 @@
+\documentclass{FR16} 
+
+\pgfplotsset{compat=1.14}
+\begin{document}
+
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+% ===================================================================================================== %
+
+\section{Cadre et contexte du stage}
+
+\subsection{Période}
+Le stage à eu lieu du 1\ier{} Septembre au 31 Décembre 2019, dans le cadre du stage obligatoire pour mon cursus à l'EPITECH, durant la 2ème année
+
+\subsection{Conventions et standards du milieu}
+\label{subsec:Conventions et standards du milieu}
+Le milieu de l'animation est un peu particulier. En effet, dans celui-ci, les périodes pleines alternent avec les périodes creuse, en fonction de ce qui est en production, ainsi que leur avancement dans celle-ci. Il est donc habituel de recourir à beaucoup de contrats à durée déterminée, de voir certaines personnes venir travailler pour une première production, partir à la fin de leur contrat, revenir quelques mois plus tard pour une autre production, etc... Ceci pose beaucoup de contraintes aussi bien humaine que matériel que logiciel.
+Il est nécessaire suivre les départs et arrivés, leur comptes utilisateur, leur attribuer du matériel, les licences logiciels, ceux pour des métiers divers et variés (allant de régisseur à réalisateur, en passant par RH et comptable)
+
+\subsection{Présentation général de l'entreprise}
+J'ai effectué mon stage dans l'entreprise TeamTO, entreprise de création et d'animation 3D. Elle produit pour elle-même (\textit{Gus, petit oiseau, grand voyage}, \textit{Angelo la Débrouille} ou encore \textit{Mighty Mike}), mais aussi en prestation (\textit{Les Lapins Crétins Invasion} pour Ubisoft, \textit{Pyjamasque} pour Frog Box ou encore \textit{Princesse Sofia} pour Walt Disney). L'entreprise est majoritairement constitué de "pôles", dédiés au différentes production audiovisuels.
+
+\subsection{Spécificité de l'entreprise}
+TeamTO est le plus gros studio d'animation indépendant Européen, avec 2 sites de production (Paris et Valence). Avec environ 150 à 200 employés, et 3 productions en cours de fabrication en parallèle, il y a toujours quelqu'un qui travail, et toujours quelqu'un qui a besoin d'assistance. De plus, l'entreprise étant aussi prestataire de grandes entreprises, il est nécessaire d'avoir un certain niveau de confidentialité, de sécurité des informations, et de rapidité. Il est aussi important de noter que les 2 sites de l'entreprise travaillent sur les mêmes productions (et non pas en séparé), obligeant un collaboration avec le département système de Valence.
+
+\subsection{Rôle}
+J'ai effectué mon stage sous le rôle de \textit{Technicien Système / Réseaux}. Sous les ordres des \textit{Administrateurs système / réseaux}, mon but est de les assister dans leur missions, notamment "sur le terrain", afin d'effectuer les premiers diagnostiques en cas d'incident, de récupérer des informations sur le parc, ou encore d'effectuer les réparations/remplacement nécessaire
+
+\subsection{Difficultés technique}
+\subsubsection{Multiplicité des rôles}
+La création de films et séries 3D nécessitent un nombre assez important de personnes et surtout de métiers. Il est nécessaire d'avoir une équipe de production (avec Réalisateur, assistant de production...), des storyboarder (qui produisent le storyboard, version dessiné des plans), des modeleurs (qui s'occupent de créer des objets, décors et personnes en 3D), des surfaceurs (qui doivent donner de la couleurs), des rigger (qui doivent transformer un objet brut en objet capable d'être animé), des animateurs (qui doivent animer et donner vie aux personnages et objets), des artistes VFX (responsable des effets spéciaux), des compositeurs (Qui s'occupent d'associer les différentes sources pour créer des images), des monteurs (pour transformer les images et plans en produit final), une équipe marketing... Tout ces métiers ont des besoins matériel et logiciels différents (par exemple, un surfaceur à besoin d'un écran à colorimétrie précise pour leur logiciel de 3D, tandis que le storyboarder utilise un autre logiciel, et nécessite une tablette graphique pour dessiner).
+\subsubsection{Attribution matériel}
+L'entièreté des personnes travaillant à TeamTO nécessitent un ordinateur. Il est donc nécessaire de se procurer les machines nécessaire. Il est aussi important de prendre des machines haut de gamme (La moyenne en RAM des ordinateurs chez TeamTO est de 32Go, et tout ce qui est en dessus de 24Go est considéré insuffisant. La moyenne de RAM des machines dans le commerce pour grand publique est elle de... 8Go). Passé les machines, il faut trouver des périphériques. Certains métiers ont besoin de tablette graphiques simple, d'autre de tablette graphiques avec écran intégrés, d'autres encore d'écrans avec colorimétrie précise et ajustable...
+Une fois le matériel disponible, il faut suivre les attributions, les départs, les déménagements interne, etc afin de pouvoir savoir qui possède quoi, depuis quand, et quand il n'en aura plus besoin afin de pouvoir le redistribuer.
+\subsubsection{Attribution logiciel}
+\label{subsubsec:Attribution logiciel}
+Il est aussi nécessaire de faire l'équivalent du matériel, mais aussi pour le logiciel. En effet, avec environ 200 licences \textit{\nameref{subsubsec:Autodesk Maya}}, plus de 500 licences \nameref{subsubsec:Pixar Renderman}, environ 100 licences \href{https://www.foundry.com/products/nuke}{DigitalFoundry \textit{Nuke}}, ou bien encore une soixantaine de licence \nameref{subsubsec:Adobe Photoshop}, il faut mettre en place les configurations logiciels partout pour les logiciels communs (comme Renderman), les installer sur les postes nécessaire, et attribuer/retirer les licences pour les logiciels en quantité limité.
+\subsubsection{Rendu des images}
+L'animation 3D nécessite beaucoup de puissance de calcul, afin de transformer un plan dans un logiciel en image. Un ordinateur de bureau classique prendrais plus de 2 jours pour rendre une seule image. En 2013, Pixar avais besoin de 29h par image. \footnote{\href{https://venturebeat.com/2013/04/24/the-making-of-pixars-latest-technological-marvel-monsters-university/}{Venture Beat - How Pixar made Monsters University, its latest technological marvel (EN)}} Il est donc nécessaire de posséder une puissance de calcul importante. Pour ce faire, TeamTO possède une ferme de rendu d'environ 6500 coeurs (13000 en Hyper-Threading), permettant de rendre une image en 2 heures (Les images sont beaucoup plus simple à rendre chez TeamTO, car moins complexe). Cette ferme est divisé en 2 parties, une première étant des machines et serveurs dédiés, l'autre étant les machines des utilisateurs quand ceci ne s'en servent pas (La nuit par exemple).
+\subsubsection{Multiplicité des sites}
+TeamTO étant sur 2 sites, il est nécessaire de travailler en collaboration. Le site principal est celui de Paris, et le second se trouve dans la commune de Bourg-Les-Valences. Ce dernier s'occupe majoritairement de l'animation, tandis que le studio Parisien s'occupe du reste (Modélisation, production, effets spéciaux, montage...)
+Il est à noté que les départemnts système sont indépendants d'un site à l'autre: Toute les améliorations que j'ai pu apporter au studio n'affectera que le site parisien, le site Valentinois n'ayant aucune obligation de suivre dans la gestion de leur parc informatique. En revanche, les 2 départements système coopèrent sur le transfert d'informations.
+
+% ================================================================================================= %
+
+\section{Tâches}
+
+\subsection{Tâches unique}
+\subsubsection{Amélioration du traitement des demandes utilisateurs}
+Il m'a été demandé de participer à l'amélioration du traitement des tickets, problèmes et autre demandes des utilisateurs. Auparavant, la plupart des demandes avais lieu en face à face, sur \href{https://rocket.chat}{Rocket.Chat} (service de messagerie instantanée), ou sur \href{https://www.redmine.org/}{Redmine} (Système de gestion de projet). Ces services étant peux adaptés, il a été décidé de passer l'ensemble du support sur \href{https://glpi-project.org/fr/}{GLPI}. Pour ce faire, nous avons mis en place sur GLPI des formulaires simplifiés pour les demandes communes (comme les demandes d'accès à un serveur de données, ou pour demander un poste et le matériel nécessaire en cas de nouvel arrivant). De plus, chaque demande en face à face ou sur Redmine est portée sur GLPI par un technicien ou un administrateur. Enfin, via la création d'un bot, il est possible de rapidement transférer les demandes depuis Rocket.Chat vers GLPI.
+\subsubsection{Amélioration de la documentation}
+Certaines documentation étant dépassés ou simplement inexistante, il m'a été demandé d'améliorer la documentation général du département système. En outre, j'ai participé à la création d'une fiche de procédure précise sur la résolution des tickets GLPI, la correction d'informations dépassés dans les informations sur la procédure de réinstallation d'une machine, ou encore des règles concernant les salles de réunion. Ce travail consistait aussi à porter et rassembler sur \textit{Overmind}(Outil interne à l'entreprise, ci-après dénommé OVM) les documentations précédamment existante.
+\subsubsection{Amélioration du parc informatique et des protocoles}
+Dans le cadre de la  transition de \textit{Windows 7} vers \textit{Windows 10} (Voir section\textit{\nameref{subsubsec:Microsoft Windows}}), l'installation de \textit{Windows 10} ainsi que les logiciels nécessaires est une tâche longue. J'ai ainsi eu la tâche de rechercher des solutions techniques pour faciliter le procéssus, ainsi que d'économiser du temps.
+J'ai réussi à réduire le temps d'installation de 4 heures avec vérification humaine quasi-permanente à 2h, avec présence humaine nécessaire 10 minutes (en début d'installation)
+De plus, j'ai échaffaudé et largement avancé dans le déploiment automatique des logiciels, grâce à \textit{Chocolatey}. Grâce à sa grande compatibilité avec de nombreux outils d'automatisation à distance, il sera bientôt possible de réinstaller une machine en 1h, et en grande majorité à distance.
+\subsubsection{Création d'outils}
+Certaines taches sont fastidieuse et lente à faire à la main. J'ai donc eu l'occasion de profiter de mon expérience en développement pour créer des outils à destination du département système afin de gagner du temps. Par exemple, j'ai développé une librairie qui permet programmatiquement de changer la sortie audio d'un ordinateur Windows (C\#), ainsi qu'un petit programme (Python) qui choisi la sortie audio que l'on souhaite par son nom, afin de la définir comme sortie audio de Windows. J'ai aussi produit un utilitaire (C\#) qui permet de configurer l'utilisation ou non de l'option \textit{Profils itinérants} de Windows. Ceci permet de configurer cette option à distance, sur l'utilisateur de notre choix (Ce qui avant nécessitait de se connecter en personne, en tant que l'utilisateur concerné sur la machine, puis d'aller chercher une option profonde de Windows).
+\subsubsection{Aide au déménagement de locaux}
+De par sa taille, la section dédié au déménagement possède sa propre section \nameref{subsec:disponible ici}
+
+\subsection{Tâches régulière}
+\subsubsection{Assistance à l'utilisateur}
+Ma principale mission consiste à porter assistance à l'utilisateur. En collaboration avec les administrateurs quand c'est nécessaire, j'interviens physiquement en cas de soucis matériel (Matériel défectueux ou manquant), logiciels (Licence manquante, logiciel non installé...), ou encore pour répondre aux questions des utilisateurs.
+\subsubsection{Mise en place du matériel aux nouveaux arrivants}
+Comme expliqué dans \textit{\nameref{subsec:Conventions et standards du milieu}}, il est commun que des employé arrivent ou revienne, et ceux pour une durée limitée et connue. Ainsi, il est du ressort du département système de s'assurer que ceux-ci ai de quoi travailler. Tandis que les administrateurs système s'occupent de paramétrer leurs différents comptes utilisateur, je suis tâché de sourcer une machine suffisante pour le métier, les périphériques nécessaire, ainsi que d'installer physiquement la machine la où la demande à été faite. Il m'incombe aussi d'installer tout logiciels manquants nécessaire à l'utilisateur.
+\subsubsection{Maintenance du parc informatique}
+Le parc étant particulièrement grand, il est nécessaire d'en prendre soin. J'ai été demandé de passer régulièrement dans les différents emplacements de l'entreprise, afin de rendre compte et faire l'inventaire du matériel présent. De plus, j'ai été assigné à la réinstallation de machine (afin de les rendre à un état logiciel proche de la sortie d'usine). Enfin, j'ai participé à l'amélioration du suivi de certaines section matériels (comme les stylets de tablette graphique ou les écrans), afin de simplifier le suivi et l'affectation.
+\newpage
+
+\subsection{Aide au déménagement des locaux}
+\label{subsec:disponible ici}
+Suite à la fin du bail dans les locaux initiaux, TeamTO a du déménager de leurs locaux initiaux (Basé porte de la villette). La recherche ayant été difficile, le déménagement s'est fait en plusieurs parties.
+Entre le 1\ier{} Décembre et le 15 décembre, une partie du studio (spécifiquement, les animateurs et les directions de productions) est hébergée par un autre studio (Studio 100), le reste étant dans un bureau \href{https://www.wework.com/fr-FR}{WeWork}. Passé le 15 décembre, un autre déménagement à eu lieu, pour rassembler le studio dans un autre bureau WeWork, plus permanent.
+
+\subsubsection{Porte de la Villette -> Studio 100}
+La majorité du studio a été hébergé dans les locaux de Studio 100 (Studio qui est malheureusement en cours de fermeture. Les locaux étant vides, Studio 100 a accepté d'héberger temporairement TeamTO)
+J'ai participé aux déménagement en aidant les employés de TeamTO à débrancher leur machines, débrancher les cables réseaux des serveurs, et encartonner ce qui n'était pas à un utilisateur particulier. Par la suite, j'ai participé au rebranchement des machines sur le bureau des utilisateurs. Les utilisateurs devais pouvoir arriver Lundi matin, et être prêt à travailler.
+\subsubsection{Porte de la Villette -> WeWork - La Fayette}
+Studio 100 n'ayant pas la place d'accueillir tout le monde, les métiers en dehors de l'animation sont hébergés dans un local de WeWork. J'ai, comme à Studio 100, participé à l'aide avant le déménagement ainsi qu'à la réinstallation des postes. En revanche, l'installation fut plus compliqué: Passant d'un réseau interne à 2 réseaux séparés, il a fallu installer des clients VPN sur les machines des utilisateurs. De plus, la salle dans laquelle nous étions hébergés n'étais pas assez bien fourni en raccordement réseaux, un travail de raccordement étais nécessaire (Raccorder ~30 machines sur 5 switchs différents)
+\subsubsection{Studio 100 \&\& WeWork - La Fayette -> WeWork - Boulevard de la Villette}
+En attente du-dit déménagement
+
+% ==================================================================================================== %
+
+\section{Logiciels et matériels métiers}
+
+Le métier de l'infographie utilise du matériel informatique ainsi que des logiciels particulier. Il est intéressant de les lister (de manière non-exhaustive) afin de voir leur utilisation, ainsi que les difficultés que cela génère dans le département système.
+\subsection{Logiciels Système}
+Voici une liste des logiciels que j'ai utilisé en tant que technicien système
+\subsubsection{Microsoft Windows}
+\label{subsubsec:Microsoft Windows}
+TeamTO utilise 2 versions de \textit{Microsoft Windows} pour ses utilisateurs, en l'occurence \textit{Windows 7} et \textit{Windows 10}. Le premier est majoritairement attribué aux utilisateurs de machines plus ancienne, qui ne possède pas de licence \textit{Windows 8} ou \textit{Windows 10}, ainsi que celles possédant bien une licence, mais n'ayant pas été remise à jour. La procédure de conversion du parc vers \textit{Windows 10} étant relativement récente, c'est aussi le système d'exploitation le plus commun. La procédure à été déclenchée avant mon arrivée dans l'entreprise, du fait de la fin du support technique de \textit{Windows 7} par Microsoft\footnote{\href{https://support.microsoft.com/fr-fr/help/4057281/windows-7-support-will-end-on-january-14-2020}{Support Microsoft - FAQ Fin de support Windows 7}}. Si une machine sous Windows 7 n'est plus utilisé, elle est soit réinstallée sur \textit{Windows 10} si la licence le permet, soit mise de côtée/réinstallée sur \textit{Windows 7}, mais ne sera utilisée qu'en cas de besoin immédiat (à cause du risque à la sécurité et à la stabilité). L'autre système d'exploitation utilisé est \textit{Windows 10}. Celui-ci est installé par défaut sur les machines les plus récentes, ainsi que sur des machines plus anciennes qui ont été livrés avec une licence \textit{Windows 8}, mais fonctionnant aussi sur \textit{Windows 10}.
+\subsubsection{Chocolatey}
+\textit{Chocolatey}(Logiciel de \textit{Chocolatey Software, Inc}, ci-après dénommé choco) est un gestionnaire de paquet pour Windows. Celui-ci nous permet d'installer et configurer simplement tous nos logiciels, que ce soit des logiciels grands publique (Comme \textit{Mozilla Firefox} ou \textit{Rocket.Chat}), comme nos logiciels métiers.
+La plupart des logiciels grand publiques sont déjà configurés et disponible en ligne, nous permettant de pouvoir les installer en local ou à distance en quelques minutes. Cependant, nos logiciels métiers ne sont pas disponible directement. Ainsi, il a fallu créer nous-mêmes nos "paquets", afin de pouvoir installer ces logiciels via choco.
+L'intérêt de Chocolatey est double: Il permet à un technicien une installation rapide (un simple \mintinline{sh}{choco install [logiciel]} dans un invité de commande), et à un administrateur un déployment généralisé via des outils se servant de choco, comme AWX \footnote{\href{https://github.com/ansible/awx}{Projet AWX par Ansible sur GitHub}}
+\subsubsection{Overmind}
+\textit{Overmind} est une application interne de l'entreprise. Elle joue le rôle d'emploi du temps et de gestionnaire d'asset. La partie emploie du temps ne sert pas au département système, mais sert pour pour la majorité des métiers du studio. En revanche, nous nous servons du gestionnaire d'asset. En effet, Overmind inclus une section "Wiki", nous servant de base de connaissance, et d'endroit où stocker la documentation. Entièrement équipé pour produire du texte enrichi au format Markdown, j'ai pu y déposer, trier, et mettre à jour d'anciennes documentations, ainsi que d'ajouter de nouvelles informations (Comprenant du "savoir oral", ainsi que les nouveaux procédés d'installation que j'ai développé)
+\subsubsection{NTLite}
+\textit{NTLite} de NTSoft est un logiciel qui permet la modification d'images d'installation Windows.
+C'est l'outil que j'ai utilisé pour réduire drastiquement le temps d'installation. Il permet (entre autre), de configurer automatiquement les disques dur, rejoindre automatiquement un domaine Active Directory, définir à l'installation le nom de la machine, éxecuter un script à l'installation...)
+
+\subsection{Logiciels Métiers}
+Cette liste énumère une liste de logiciels que je n'ai pas utilisé en tant que technicien, mais dont j'ai du apporter du support pour les utilisateurs
+\subsubsection{Autodesk Maya}
+\label{subsubsec:Autodesk Maya}
+\textit{Maya} (de l'entreprise Autodesk) est un logiciel d'animation et de modélisation 3D. Logiciel existant depuis 1998, il est leader du marché, tellement qu'il est le logiciel utilisé par 10 gagnants d'Oscar du meilleur effet visuel... D'affiler\footnote{\href{https://venturebeat.com/2015/01/15/hollywood-fx-pros-i-want-to-be-an-oscars-maya-winner/}{Venture Beat - And the Oscar for best visual effects goes to…Autodesk’s Maya (EN)}}. À TeamTO, c'est l'un des logiciels les plus importants. La grande majorité de nos graphistes s'en servent dans leur tâche quotidienne. De plus, c'est l'un des logiciels utilisé dans notre ferme de rendu. Il était donc de mes responsabilités d'installer Maya sur les machines qui ne le possédait pas.
+Autre difficulté technique, chaque production utilise une version spécifique de Maya. Ainsi, il faut installer et supporter 3 versions de Maya.
+\subsubsection{Pixar Renderman}
+\label{subsubsec:Pixar Renderman}
+\textit{Renderman} par Pixar est un moteur de rendu (Logiciel qui as pour mission de transformer des fichiers d'une scène en 3D en images). Il est notre principal moteur de rendu dans l'entreprise. J'ai majoritairement effectué des installations de Renderman, afin que les animateurs puissent s'en servir dans Maya. Renderman a été un des meilleurs candidats pour l'installation à distance via Chocolatey, de par sa facilité d'installation, et son besoin d'être universellement présent (afin de s'intégrer à la ferme de rendu)
+\subsubsection{Sentry}
+\textit{Sentry} est un lanceur d'application et relai d'information pour Overmind, développé en interne. C'est un logiciel critique pour l'entrprise, et son déployment généralisé est nécessaire. En revanche, il fut lui-aussi un candidat pour Chocolatey, mais beaucoup plus difficile à mettre en place (Du fait des choix techniques fait par les développeurs, facilitant le déployment par d'autre moyen, mais le rendant compliqué pour Chocolatey)
+\subsubsection{Adobe Photoshop}
+\label{subsubsec:Adobe Photoshop}
+\textit{Photoshop}, le célèbre logiciel d'édition d'image d'Adobe, fait aussi parti de la liste des logiciels utilisés à TeamTO. Contrairement aux autre logiciels présents plus haut, ce logiciel n'a pas besoin d'être présent partout. En effet, il n'est pas nécessaire pour la ferme de rendu, et le nombre d'utilisateur est limité. Lui aussi a été un candidat pour Chocolatey, notamment pour le rendre facile à installer (Adobe étant très protecteur dans la distribution et l'installation de ses logiciels, rendre l'installation possible en faisant un simple \mintinline{sh}{choco install photoshop} dans un invité de commande (au lieu de devoir retélécharger un installateur non officiel ni en téléchargant toute la suite Creative Cloud) est un avantage certain). De plus, toujours dans le but de protéger ses logiciels, Adobe ne propose pas d'option de volumes. Comme indiqué dans \nameref{subsubsec:Attribution logiciel}, certains logiciels nécessite d'attribuer et retirer des licences nominatives.
+
+\subsection{Matériel spécifique}
+\subsubsection{Asus ProArt (PA248Q)}
+Le milieu de l'animation travaille avec des images. Et ces images sont composés de couleurs. Afin d'avoir un bon rendu des couleurs, il est nécessaire d'avoir un écran capable d'une grande précision dans son rendu colorimétrique. TeamTO utilise des écrans \href{https://www.asus.com/us/Monitors/ProArt-PA248Q/}{Asus ProArt (PA248Q)}. Ces écrans étant plus cher qu'un écran classique, et non nécessaire pour certains métiers, leur nombre est limité, et c'est au département système de les installer et caliber pour l'utilisateur.
+\subsubsection{Datacolor SpyderX Pro}
+Afin de calibrer un écran, il est nécessaire d'utiliser une sonde colorimétrique. À ce sujet, TeamTO utilise une sonde \href{https://spyderx.datacolor.com/about-spyderx/}{Datacolor SpyderX Pro}. En utilisant cette sonde et le logiciel Open-Source \href{https://displaycal.net/}{DisplayCAL}, il est possible de calibrer un écran pour que celui-ci propose un rendu des couleurs précis.
+\subsubsection{Wacom Intuos Pro}
+\label{subsubsec:Wacom Intuos Pro}
+Wacom est le plus grand fabriquant au monde de tablettes graphiques. Leur produit phare est la tablette \href{https://www.wacom.com/fr-fr/products/pen-tablets/wacom-intuos-pro}{Wacom Intuos Pro}. Leur déployment est une vrai difficulté, d'un point de vu logiciel (nécessite d'installer des drivers qui sont long à installer et nécessite un redémarrage) mais aussi technique (le travail d'inventaire est difficile, surtout pour les stylets qui ne sont pas assez grands pour permettre d'y coller une étiquette).
+\subsubsection{Wacom Cintiq Pro}
+La marque Wacom produit une autre gamme de produits, les tablettes avec écran intégrés, la gamme \href{https://www.wacom.com/fr-fr/products/pen-displays/wacom-cintiq-pro-overview}{Wacom Cintiq Pro}. Elle les mêmes soucis que les \nameref{subsubsec:Wacom Intuos Pro}, accompagné de la gestion de la connectique, et de l'attribution (car les Cintiq Pro sont en nombre plutôt limités)
+
+\end{document}
