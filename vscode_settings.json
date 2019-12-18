@@ -1,0 +1,48 @@
+"latex-workshop.latex.recipes": [
+    {
+        "name": "XeLaTeX Pygmentized 🔃",
+        "tools": [
+            "MakeBuildDir",
+            "XeLaTeXPygment",
+            "XeLaTeXPygment",
+            "XeLaTeXPygment"
+				"internTT2019"
+        ]
+        //Run 3 times XeLaTeXPygment, because cross references might fail
+    }
+],
+"latex-workshop.latex.tools": [
+    {
+        "name": "MakeBuildDir",
+        "command": "mkdir",
+        "args": [
+            "-p",
+            "%DIR%/build"
+        ],
+        "env": {}
+    },
+    {
+        "name": "XeLaTeXPygment",
+        "command": "xelatex",
+        "args": [
+            "-synctex=1",
+            "-undump=xelatex",
+            "-shell-escape",
+            "--output-directory=build",
+            "%DOC%.tex"
+        ],
+        "env": {}
+    },
+    {
+        "name": "internTT2019",
+        "command": "cp",
+        "args": [
+            "build/%DOCFILE%.pdf",
+            "internship_report.pdf"
+        ],
+        "env": {}
+    }
+]
+//Settings for Visual Studio Code for compilation
+//Requirement: LaTeX Workshop
+//https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
