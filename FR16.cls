@@ -60,7 +60,9 @@
 %\RequirePackage{xltxtra,xunicode}
 
 \usepackage{comment}
-\usepackage{minted}
+\usepackage[
+  outputdir=build
+]{minted}
 \usemintedstyle{vs}
 
 
