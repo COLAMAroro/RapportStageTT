@@ -6,7 +6,7 @@
             "XeLaTeXPygment",
             "XeLaTeXPygment",
             "XeLaTeXPygment"
-				"internTT2019"
+            "internTT2019"
         ]
         //Run 3 times XeLaTeXPygment, because cross references might fail
     }
