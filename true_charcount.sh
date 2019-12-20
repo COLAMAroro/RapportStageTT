@@ -1,0 +1,1 @@
+pdf2txt.py internship_report.pdf | tr -s "[:alumn: ]" | tr -d ".\n" | sed '/^$/d' | wc -c
